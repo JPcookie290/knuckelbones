@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Knuckelbones</string>
+
+    <!-- Displayed Text -->
+    <string name="start_title">Want to play Knuckelbones?</string>
+    <string name="start_difficulty">Difficulty</string>
+    <string name="how_to_play">How to Play</string>
+
+    <!-- Buttons -->
+    <string name="one_player">1 Player</string>
+    <string name="two_player">2 Player</string>
+    <string name="difficulty_normal">normal</string>
+    <string name="difficulty_hard">hard</string>
+    <string name="start_button">Start</string>
+    <string name="back_button">Back Button</string>
+    <string name="info_button">Info Button</string>
+
+    <!-- Info/Description Text -->
+    <string name="dice_to_roll">Dice to roll</string>
+    <string name="dice_view">Dice view</string>
+
 </resources>
