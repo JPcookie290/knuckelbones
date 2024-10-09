@@ -17,13 +17,13 @@ class MainActivity : AppCompatActivity() {
 
         binding.startButton.setOnClickListener {
             var playerName = binding.inputPlayerOne.text.toString()
-
-            if (playerName.isEmpty()) {
+            if (playerName.isBlank()){
                 playerName = "Player 1"
             }
 
+
             val intent = Intent(this, GameActivity::class.java).apply {
-                putExtra( "players", playerName)
+                putExtra( "playerOne", playerName)
             }
             startActivity(intent)
         }
