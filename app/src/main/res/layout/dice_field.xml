@@ -6,7 +6,7 @@
     android:padding="8dp"
     android:layout_gravity="center_horizontal"
     android:orientation="horizontal"
-    android:background="@color/material_dynamic_primary60">
+    android:background="@color/dull_red">
 
     <!-- TODO size will be adapted, currently only for display purpose -->
     <LinearLayout
@@ -14,6 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@drawable/border_column"
+        android:layout_marginRight="5dp"
         android:gravity="center"
         >
         <ImageView
@@ -21,27 +23,25 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@color/white"
             android:contentDescription="@string/dice_view" />
         <ImageView
             android:id="@+id/column_one_dice_two"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@color/white"
             android:contentDescription="@string/dice_view" />
         <ImageView
             android:id="@+id/column_one_dice_three"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@color/white"
             android:contentDescription="@string/dice_view" />
         <TextView
             android:id="@+id/column_one_points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:textColor="@color/light_red"
             android:text="0"/>
 
     </LinearLayout>
@@ -50,6 +50,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@drawable/border_column"
+        android:layout_marginRight="5dp"
         android:gravity="center"
         >
         <ImageView
@@ -57,27 +59,25 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@color/white"
             android:contentDescription="@string/dice_view" />
         <ImageView
             android:id="@+id/column_two_dice_two"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@color/white"
             android:contentDescription="@string/dice_view" />
         <ImageView
             android:id="@+id/column_two_dice_three"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@color/white"
             android:contentDescription="@string/dice_view" />
         <TextView
             android:id="@+id/column_two_points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:textColor="@color/light_red"
             android:text="0"/>
 
     </LinearLayout>
@@ -86,6 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@drawable/border_column"
         android:gravity="center"
         >
         <ImageView
@@ -93,27 +94,26 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@color/white"
+
             android:contentDescription="@string/dice_view" />
         <ImageView
             android:id="@+id/column_three_dice_two"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@color/white"
             android:contentDescription="@string/dice_view" />
         <ImageView
             android:id="@+id/column_three_dice_three"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="8dp"
-            android:background="@color/white"
             android:contentDescription="@string/dice_view" />
         <TextView
             android:id="@+id/column_three_points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:textColor="@color/light_red"
             android:text="0"/>
 
     </LinearLayout>

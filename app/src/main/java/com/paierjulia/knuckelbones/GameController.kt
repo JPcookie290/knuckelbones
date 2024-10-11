@@ -1,46 +1,67 @@
 package com.paierjulia.knuckelbones
 
-class GameController(private val playerName: String) {
+import android.util.Log
+
+class GameController(
+    private val playerName: String,
+    private val updateUI: () -> Unit
+) {
     lateinit var playerOne: Player
     lateinit var playerTwo: Player
 
-    private var currentPlayer : Player
-    var twoPlayers : Boolean = false
+    private var currentPlayer: Player
+    val currentOpponent: Player
+    var twoPlayers: Boolean = false
+    var lastRolledDice: Int = 0
 
     init {
         initializePlayers()
         currentPlayer = playerOne
+        currentOpponent = playerTwo
     }
 
     private fun initializePlayers() {
         playerOne = Player(playerName)
-        playerTwo = ComputerPlayer()
+        playerTwo = if (twoPlayers) Player("Player 2") else ComputerPlayer()
     }
 
-    fun rollDice() : Int {
-        var value = (1..6).random()
-        currentPlayer.setRolledDice(value)
-        return value
+    fun rollDice(): Int {
+        lastRolledDice = (1..6).random()
+        currentPlayer.setRolledDice(lastRolledDice)
+        Log.d("GameController", "Dice: $lastRolledDice")
+        return lastRolledDice
     }
 
-    fun placeDice(column : Int) {
+    fun placeDice(column: Int) {
+        setCurrentOpponent()
         if (currentPlayer.getRolledDice() == 0) return
-        currentPlayer.placeDice(column)
+        currentPlayer.placeDice(column, currentOpponent)
+
         changePlayer()
-        if (!twoPlayers){
+        if (!twoPlayers) {
             computerTurn()
         }
     }
 
-   fun changePlayer() {
+    fun changePlayer() {
         currentPlayer = if (currentPlayer == playerOne) playerTwo else playerOne
+    }
+
+    fun setCurrentOpponent() {
+        if (currentPlayer == playerOne) playerTwo else playerOne
+    }
+
+    fun removeOpponentInstances() {
+
     }
 
     fun getCurrentPlayer(): Player = currentPlayer
 
     private fun computerTurn() {
         rollDice()
-        (playerTwo as ComputerPlayer).computerTurn(playerOne.diceField)
+        (playerTwo as ComputerPlayer).computerTurn(playerOne)
+        updateUI()
+        checkGameEnd()
         changePlayer()
     }
 
@@ -56,7 +77,17 @@ class GameController(private val playerName: String) {
         }
     }
 
-    fun checkGameEnd(){
-
+    // TODO: not working
+    fun checkGameEnd() {
+        if (currentPlayer.checkBoard()){
+            Log.d("GameController", "Board filled player: $currentPlayer")
+            if (playerOne.totalPoints > playerTwo.totalPoints){
+                Log.d("GameController", "$playerOne won against $playerTwo")
+            } else if (playerOne.totalPoints == playerTwo.totalPoints){
+                Log.d("GameController", "It's a draw!")
+            } else {
+                Log.d("GameController", "$playerTwo won against $playerOne")
+            }
+        }
     }
 }

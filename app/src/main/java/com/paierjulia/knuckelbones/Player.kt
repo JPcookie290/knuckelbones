@@ -14,10 +14,17 @@ open class Player(
         return diceField.getRolledDice()
     }
 
-    fun placeDice(column : Int){
+    fun placeDice(column : Int, opponent: Player){
         diceField.placeDiceInColumn(column)
+        removeOpponentInstances(column, opponent)
+        totalPoints = diceField.calculateTotalPoints()
     }
 
+    fun removeOpponentInstances( column: Int, opponent: Player) {
+        opponent.diceField.removeAllInstancesInColumn(column, getRolledDice())
+    }
+
+    // TODO: not working
     fun checkBoard() : Boolean {
         return diceField.isBoardFilled()
     }

@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_gray"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -123,6 +124,7 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/start_button"
             android:textSize="40sp"
+            android:backgroundTint="@color/dark_red"
             android:textStyle="bold"/>
 
     </LinearLayout>
@@ -133,7 +135,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="16dp"
-        android:background="@color/cardview_dark_background"
+        android:background="@color/dark_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -145,7 +147,7 @@
             android:layout_weight="1"
             android:textSize="24sp"
             android:layout_gravity="center_vertical"
-            android:textColor="@color/black"
+            android:textColor="@color/dull_red"
             android:text="@string/how_to_play"/>
 
         <ImageButton
