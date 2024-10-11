@@ -12,7 +12,6 @@ class DiceFieldView @JvmOverloads constructor(
 
     private lateinit var binding: DiceFieldBinding
 
-
     fun bindViews(binding: DiceFieldBinding) {
         this.binding = binding
     }
@@ -38,6 +37,7 @@ class DiceFieldView @JvmOverloads constructor(
 
     }
 
-    // for testing
+
+
 
 }

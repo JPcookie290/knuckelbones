@@ -50,7 +50,7 @@
     <!-- First Dice Field, positioned below Player Two Info and centered horizontally -->
     <include
         layout="@layout/dice_field"
-        android:id="@+id/dice_field_top"
+        android:id="@+id/dice_field_player_two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/player_two_info"
@@ -62,7 +62,7 @@
         android:id="@+id/dice_roll_button"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:background="@color/white"
+        android:src="@drawable/dice_one_small"
         android:contentDescription="@string/dice_to_roll"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,7 +72,7 @@
     <!-- Second Dice Field, positioned above Player One Info and centered horizontally -->
     <include
         layout="@layout/dice_field"
-        android:id="@+id/dice_field_bottom"
+        android:id="@+id/dice_field_player_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/player_one_info"
