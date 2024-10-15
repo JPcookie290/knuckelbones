@@ -79,4 +79,10 @@ class DiceFieldController {
     fun getRolledDice(): Int = rolledDice
 
     fun isBoardFilled(): Boolean = filledBoard
+
+    fun clearBoard() {
+        columnOne.clear()
+        columnTwo.clear()
+        columnThree.clear()
+    }
 }

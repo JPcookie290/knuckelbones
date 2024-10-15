@@ -14,9 +14,17 @@
     <string name="start_button">Start</string>
     <string name="back_button">Back Button</string>
     <string name="info_button">Info Button</string>
+    <string name="close">Close</string>
+    <string name="play_again">Play Again</string>
+    <string name="go_to_main_menu">Go to Main Menu</string>
 
     <!-- Info/Description Text -->
     <string name="dice_to_roll">Dice to roll</string>
     <string name="dice_view">Dice view</string>
+    <string name="roll_dice">Roll Dice</string>
+    <!-- TODO rework text -->
+    <string name="game_explanation">The game consists of two 3x3 boards, each belonging to their respective player. On the player\'s turn, they use the roll dice button to roll a 6-sided die and must place it in a column on their board. Each player’s score is the sum of all the dice values on their board. Column scores increase when multiple dice of the same value are placed in the same column.</string>
+
+
 
 </resources>

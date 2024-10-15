@@ -51,9 +51,6 @@ class GameController(
         if (currentPlayer == playerOne) playerTwo else playerOne
     }
 
-    fun removeOpponentInstances() {
-
-    }
 
     fun getCurrentPlayer(): Player = currentPlayer
 
@@ -89,5 +86,16 @@ class GameController(
                 Log.d("GameController", "$playerTwo won against $playerOne")
             }
         }
+    }
+
+    fun resetGame() {
+        playerOne.diceField.clearBoard()
+        playerOne.totalPoints = 0
+        playerTwo.diceField.clearBoard()
+        playerTwo.totalPoints = 0
+
+        currentPlayer = playerOne
+
+        updateUI()
     }
 }

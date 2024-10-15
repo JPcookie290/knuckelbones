@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@drawable/border_column"
-        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
         android:gravity="center"
         >
         <ImageView
@@ -51,7 +51,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@drawable/border_column"
-        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
         android:gravity="center"
         >
         <ImageView
